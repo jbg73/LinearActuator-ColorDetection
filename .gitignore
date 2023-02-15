@@ -1,4 +1,7 @@
+# Custom ignores
 token.txt
+.catkin_tools/
+.catkin_workspace
 
 devel/
 logs/
