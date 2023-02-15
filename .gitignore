@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-devel/
-build/
-
 token.txt
-=======
+
 devel/
 logs/
 build/
@@ -55,4 +51,3 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
->>>>>>> 95698738fdc976fcc2493fe1d39876129d7f183c
