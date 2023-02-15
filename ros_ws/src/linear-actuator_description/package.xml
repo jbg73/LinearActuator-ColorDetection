@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>linear-actuator_description</name>
+  <version>0.0.0</version>
+  <description>The linear-actuator_description package</description>
+
+  <maintainer email="todo@todo.todo">JBG73</maintainer>
+
+  <license>BSD</license>
+
+
+  <author email="todo@todo.todo">JBG73</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+
+  <export>
+  </export>
+</package>

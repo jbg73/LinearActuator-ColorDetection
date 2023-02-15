@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<robot name="LinearActuator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+	
+	<xacro:include filename="$(find linear-actuator_description)/urdf/servo.gazebo" />
+	
+	<link name="world"/>
+
+	<joint name="fixed" type="fixed">
+		<parent link="world"/>
+		<child link="parent"/>
+	</joint>
+
+	<link name="parent">
+		<inertial>
+	      <mass value="0.5"/>
+	      <inertia ixx="1.302e-04" iyy="4.0208e-04" izz="4.8021-04"/>
+	      <origin rpy="0 0 0" xyz="0 0 0"/>
+	    </inertial>
+		<collision>
+	      <geometry>
+	        <box size="1 1 1"/>
+	      </geometry>
+	      <origin rpy="0 0 0" xyz="0 0 0"/>
+	    </collision>
+	    <visual>
+	      <geometry>
+		  	<box size="1 1 1"/>
+	        <!-- <mesh filename="package://linear-actuator_description/files/Actuator-Retainer.STL" scale="1 1 1"/> -->
+	      </geometry>
+	      <origin rpy="0 0 0" xyz="0 0 0"/>
+	    </visual>
+	</link>
+	<joint name="Base" type="revolute">
+		<parent link="parent"/>
+		<child link="child"/>
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+		<axis xyz="0 0 0"/>
+		<limit effort="3.38" lower="-3.38" upper="1" velocity="3"/>
+	</joint>
+	<link name="child">
+		<inertial>
+	      <mass value="0.5"/>
+	      <inertia ixx="1.302e-04" iyy="4.0208e-04" izz="4.8021-04"/>
+	      <origin rpy="0 0 0" xyz="0 1 0"/>
+	    </inertial>
+		<collision>
+	      <geometry>
+	        <box size="1 1 1"/>
+	      </geometry>
+	      <origin rpy="0 0 0" xyz="0 1 0"/>
+	    </collision>
+	    <visual>
+	      <geometry>
+		  	<box size="1 1 1"/>
+	        <!-- <mesh filename="package://linear-actuator_description/files/Actuator-Base.STL" scale="1 1 1"/> -->
+	      </geometry>
+	      <origin rpy="0 0 0" xyz="0 1 0"/>
+	    </visual>
+	</link>
+</robot>
